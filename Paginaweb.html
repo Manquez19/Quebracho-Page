@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tienda Quebracho</title>
+  <style>
+    /* Estilos generales */
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    /* Modificamos el estilo del header */
+    header {
+      background-color: #000000; /* Cambiamos el color de fondo a negro */
+      color: #ffffff; /* Cambiamos el color del texto a blanco */
+      padding: 1rem;
+      display: flex;
+      justify-content: space-between; 
+      align-items: center;
+    }
+
+    nav ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+    }
+
+    nav li {
+      margin-right: 1rem;
+    }
+
+    nav a {
+      color: #fff;
+      text-decoration: none;
+    }
+
+    main {
+      padding: 2rem;
+    }
+
+    footer {
+      background-color: #ff9924;
+      color: #fff;
+      text-align: center;
+      padding: 1rem;
+    }
+
+    /* Estilos específicos para productos, calificaciones y buscador */
+    /* Puedes agregar estilos adicionales aquí según tus necesidades */
+
+    .product {
+      border: 1px solid #ddd;
+      padding: 1rem;
+      margin-bottom: 1rem;
+    }
+
+    .product img {
+      max-width: 100%;
+      height: auto;
+    }
+
+    .rating {
+      display: inline-block;
+      unicode-bidi: bidi-override;
+      color: #e5e500;
+      font-size: 20px;
+      height: 20px;
+      width: 100px;
+      margin-bottom: 10px;
+      position: relative;
+    }
+
+    .rating-star {
+      display: inline-block;
+      position: relative;
+      width: 20px;
+    }
+
+    .rating-star::before {
+      content: "\2605";
+      position: absolute;
+      left: 0;
+    }
+
+    /* Estilos para la imagen del lado izquierdo en el header */
+    #logo-img {
+      width: 300px;
+      height: 200px;
+      margin-right: 10px;
+    }
+
+    .search-result-image {
+      max-width: 100%;
+      height: auto;
+    }
+
+    /* Estilos para los botones de compra */
+    .buy-button {
+      background-color: #0074D9; /* Color de fondo amarillo */
+      color: #FFFFFF; /* Color de texto blanco */
+      padding: 10px 20px; /* Espaciado interno para el botón */
+      border: none; /* Sin borde */
+      cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
+      text-decoration: none; /* Elimina el subrayado del enlace */
+    }
+    .header-button {
+      background-color: #FFA500; /* Color de fondo naranja */
+      color: #fff; /* Color del texto blanco */
+      padding: 10px 20px; /* Espaciado interno para el botón */
+      border: none; /* Sin borde */
+      cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
+      text-decoration: none;
+      margin-left: auto; /* Elimina el subrayado del enlace */
+    }
+
+    /* Estilos para el botón de inicio de sesión */
+    #login-button {
+      background-color: #FFA500; /* Color de fondo naranja */
+      color: #fff; /* Color del texto blanco */
+      padding: 10px 20px; /* Espaciado interno para el botón */
+      border: none; /* Sin borde */
+      cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
+      text-decoration: none;/* Elimina el subrayado del enlace */
+      margin-left: auto;/* Cambiar lugar */
+    }
+    #search-bar {
+      width: 300px; /* Ancho deseado */
+      padding: 10px; /* Espaciado interno para hacerlo más alto */
+      font-size: 18px; /* Tamaño de fuente deseado */
+    }
+
+  </style>
+</head>
+<body>
+  <header>
+    <img id="logo-img" src="app_launcher_icon.jpg" alt="Logo">
+    <nav>
+      <ul>
+        <!-- Botón "Inicio" -->
+        <li>
+          <a href="javascript:location.reload();" class="header-button">Inicio</a>
+        </li>
+        <!-- Botón "Productos" -->
+        <li>
+          <a href="#" class="header-button">Productos</a>
+        </li>
+        <!-- Cambiamos el enlace "Contacto" para ir a la sección de contacto -->
+        <li>
+          <a href="#contacto" class="header-button">Contacto</a>
+        </li>
+      </ul>
+    </nav>
+    <input type="text" id="search-bar" placeholder="Buscar productos">
+    <!-- Movemos el botón de inicio de sesión a la derecha -->
+    <a href="inicio_sesion.html" id="login-button">Iniciar sesión</a>
+  </header>
+  
+  <!-- Conservamos el buscador -->
+  
+  
+  <main>
+    <div id="products-container">
+      <!-- Producto 1 -->
+      <div class="product">
+        <a href="balde.html">
+          <img src="valde.jpg" alt="Balde" width="200">
+          <h3>Balde</h3>
+          <div class="rating" style="width: 90%;">
+            <span class="rating-star">&#9733;</span>
+            <span class="rating-star">&#9733;</span>
+            <span class="rating-star">&#9733;</span>
+            <span class="rating-star">&#9733;</span>
+            <span class="rating-star">&#9733;</span>
+          </div>
+          <button class="buy-button" data-product="balde" href="balde.html">Comprar</button>
+        </a>
+      </div>
+      <!-- Producto 2 -->
+      <div class="product">
+        <a href="Llave.html">
+          <img src="LLLAVE.jpg" alt="Llave de paso" width="200">
+          <h3>Llave de paso</h3>
+          <div class="rating" style="width: 76%;">
+            <span class="rating-star">&#9733;</span>
+            <span class="rating-star">&#9733;</span>
+            <span class="rating-star">&#9733;</span>
+            <span class="rating-star">&#9733;</span>
+            <span class="rating-star">&#9733;</span>
+          </div>
+          <button class="buy-button" data-product="llave_de_paso" href="Llave.html">Comprar</button>
+        </a>
+      </div>
+      <!-- Producto 3 -->
+      <div class="product">
+        <a href="cerradura.html">
+          <img src="CERRA.jpg" alt="Cerradura" width="200">
+          <h3>Cerradura</h3>
+          <div class="rating" style="width: 84%;">
+            <span class="rating-star">&#9733;</span>
+            <span class="rating-star">&#9733;</span>
+            <span class="rating-star">&#9733;</span>
+            <span class="rating-star">&#9733;</span>
+          </div>
+          <button class="buy-button" data-product="cerradura" href="cerradura.html">Comprar</button>
+        </a>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <!-- Agregamos un id a la sección de contacto -->
+    <section id="contacto">
+      <p>Número de teléfono: 01150617058</p>
+      <p>Dirección: Calle Falsa 1234 Monte Carlo.</p>
+      <p>Correo Electrónico: Quebracho@Gmail.com.</p>
+      <p>Derechos de autor © 2023 Tienda Quebracho. Todos los derechos reservados.</p>
+    </section>
+  </footer>
+  <script src="search.js"></script>
+</body>
+</html>

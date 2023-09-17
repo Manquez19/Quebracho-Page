@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Iniciar Sesión - Tienda Quebracho</title>
+  <style>
+    /* Estilos generales */
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    /* Parte superior negra */
+    .header {
+      background-color: #000000;
+      color: #ffffff;
+      padding: 1rem;
+      display: flex;
+      align-items: center;
+    }
+
+    /* Estilos del formulario de inicio de sesión */
+    .login-container {
+      padding: 2rem;
+      text-align: center;
+    }
+
+    .login-form {
+      max-width: 400px;
+      margin: 0 auto;
+      background-color: #ffffff;
+      padding: 2rem;
+      border-radius: 4px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .login-form h2 {
+      color: #000000;
+    }
+
+    .login-input {
+      width: 100%;
+      padding: 8px;
+      margin-bottom: 1rem;
+    }
+
+    .login-button {
+      background-color: #fc7854;
+      color: #fff;
+      padding: 8px 16px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    /* Parte inferior naranja */
+    .footer {
+      background-color: #ff9924;
+      color: #fff;
+      text-align: center;
+      padding: 1rem;
+    }
+    #logo-img {
+      max-width: 200px; /* Ajusta el tamaño máximo de la imagen */
+      height: auto; /* Mantiene la proporción de la imagen */
+    }
+  </style>
+</head>
+<body>
+  <!-- Parte superior negra -->
+  <header class="header">
+    <img id="logo-img" src="app_launcher_icon.jpg" alt="Logo">
+    <nav style="margin-left: auto;">
+      <ul style="list-style: none; margin: 0; padding: 0; display: flex;">
+        <!-- Enlace para ir a la página de inicio -->
+        <li style="margin-right: 1rem;">
+          <a href="index.html" style="text-decoration: none; color: #fff; padding: 8px;">Inicio</a>
+        </li>
+        <li style="margin-right: 1rem;">
+          <a href="#" style="text-decoration: none; color: #fff; padding: 8px;">Productos</a>
+        </li>
+        <!-- Enlace para ir a la página de contacto -->
+        <li>
+          <a href="#contacto" style="text-decoration: none; color: #fff; padding: 8px;">Contacto</a>
+        </li>
+      </ul>
+    </nav>
+  </header>
+
+  <div class="login-container">
+    <div class="login-form">
+      <h2>Iniciar Sesión</h2>
+      <form>
+        <input class="login-input" type="text" placeholder="Nombre de usuario" required>
+        <input class="login-input" type="password" placeholder="Contraseña" required>
+        <button class="login-button" type="submit">Iniciar sesión</button>
+      </form>
+      <!-- Agrega el enlace "Regístrate" aquí -->
+      <p>Aún no formas parte? <a href="registro.html" style="text-decoration: none; color: #fc7854;">Regístrate</a></p>
+    </div>
+  </div>
+
+  <!-- Parte inferior naranja -->
+  <footer class="footer">
+    <p>Derechos de autor © 2023 Tienda Quebracho. Todos los derechos reservados.</p>
+  </footer>
+</body>
+</html>

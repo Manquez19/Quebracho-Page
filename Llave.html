@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Detalles del Balde - Tienda Quebracho</title>
+  <style>
+    /* Estilos generales */
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    /* Estilos específicos para esta página */
+    header {
+      background-color: #000000;
+      color: #ffffff;
+      padding: 1rem;
+      display: flex;
+      flex-direction: column; /* Cambio a dirección de columna */
+      align-items: center;
+      text-align: center;
+    }
+
+    header a {
+      color: #ffffff;
+      text-decoration: none;
+      margin-top: 1rem; /* Agregado para separar el enlace del título */
+    }
+
+    main {
+      padding: 2rem;
+      text-align: center;
+    }
+
+    #product-details {
+      display: flex; /* Mostrar en una fila */
+      align-items: center; /* Centrar verticalmente */
+    }
+
+    #product-image {
+      max-width: 100%;
+      height: auto;
+      margin: 0 auto; /* Centra la imagen horizontalmente */
+    }
+
+    #product-details-text {
+      text-align: left; /* Alineado a la izquierda */
+      margin-left: 2rem; /* Espacio entre la imagen y el texto */
+    }
+
+    #product-name {
+      font-size: 28px; /* Aumentado el tamaño de fuente */
+      color: #000000; /* Color azul */
+      margin-top: 0; /* Elimina el margen superior */
+    }
+
+    #product-rating {
+      font-size: 32px; /* Aumentado el tamaño de fuente */
+      color: #ffcc00;
+      margin-bottom: 1rem; /* Agregado margen inferior */
+    }
+
+    #description-title {
+      font-size: 20px; /* Aumentado el tamaño de fuente */
+      color: #000000; /* Color azul */
+      margin-top: 0.5rem; /* Agregado margen superior */
+    }
+
+    #product-description {
+      font-size: 16px;
+      text-align: left; /* Alineado a la izquierda */
+      padding: 1rem; /* Agregado relleno */
+      border: 1px solid #ddd; /* Agregado borde */
+      border-radius: 8px; /* Agregado borde redondeado */
+      background-color: #f0f0f0; /* Color de fondo gris claro */
+    }
+
+    #price-title {
+      font-size: 24px; /* Aumentado el tamaño de fuente */
+      color: #080808; /* Color azul */
+      margin-top: 0.5rem; /* Agregado margen superior */
+    }
+
+    #product-price {
+      font-size: 36px; /* Aumentado el tamaño de fuente */
+      color: #070707; /* Color rosa */
+      margin-top: 0.5rem; /* Aumentado el margen superior */
+    }
+
+    #question-form {
+      margin-top: 2rem;
+      text-align: left; /* Alineado a la izquierda */
+      padding: 1rem; /* Agregado relleno */
+      border: 1px solid #ddd; /* Agregado borde */
+      border-radius: 8px; /* Agregado borde redondeado */
+      background-color: #f0f0f0; /* Color de fondo gris claro */
+    }
+
+    #question-form h3 {
+      font-size: 28px; /* Aumentado el tamaño de fuente */
+      margin-bottom: 1rem; /* Agregado margen inferior */
+      color: #080808; /* Color azul */
+    }
+
+    label {
+      font-size: 18px; /* Tamaño de fuente para etiquetas */
+      margin-bottom: 0.5rem; /* Margen inferior para etiquetas */
+      display: block; /* Mostrar etiquetas en bloque */
+      color: #333; /* Color de etiquetas */
+    }
+
+    input[type="text"],
+    input[type="email"],
+    textarea {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 1rem;
+      border: 1px solid #ddd;
+      border-radius: 4px;
+    }
+
+    button[type="submit"] {
+      background-color: #d99400;
+      color: #fff;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      font-size: 18px;
+    }
+
+    button[type="submit"]:hover {
+      background-color: #ffcc00; /* Cambio de color al pasar el cursor */
+    }
+
+    #comments-section {
+      margin-top: 2rem;
+      text-align: left; /* Alineado a la izquierda */
+    }
+
+    #comments-section h3 {
+      font-size: 28px; /* Aumentado el tamaño de fuente */
+      margin-bottom: 1rem; /* Agregado margen inferior */
+      color: #070707; /* Color azul */
+    }
+
+    .comment {
+      margin-bottom: 2rem; /* Aumentado el margen inferior */
+      padding: 1rem; /* Añadido relleno */
+      border: 1px solid #ddd; /* Agregado borde */
+      border-radius: 8px; /* Agregado borde redondeado */
+      background-color: #f0f0f0; /* Color de fondo gris claro */
+    }
+
+    .comment p {
+      font-size: 18px; /* Aumentado el tamaño de fuente */
+      margin-top: 1rem; /* Aumentado el margen superior */
+    }
+
+    .rating {
+      font-size: 32px; /* Aumentado el tamaño de fuente */
+      color: #ffcc00;
+      margin-top: 1rem; /* Aumentado el margen superior */
+    }
+
+    /* Parte inferior naranja */
+    footer {
+      background-color: #ff9924;
+      color: #fff;
+      text-align: center;
+      padding: 1rem;
+    }
+    #logo-img {
+      width: 300px;
+      height: 200px;
+      margin-right: 1500px;
+    }
+    
+    .info-border {
+      margin-top: 2rem;
+      text-align: left; /* Alineado a la izquierda */
+      padding: 1rem; /* Agregado relleno */
+      border: 1px solid #ddd; /* Agregado borde */
+      border-radius: 8px; /* Agregado borde redondeado */
+      background-color: #f0f0f0; /* Color de fondo gris claro */
+    }
+    
+    .info-border img {
+      max-width: 100px;
+      height: auto;
+    }
+    .cloud-button {
+     background-color: #ff9924;
+     padding: 10px 20px;
+     border-radius: 20px;
+     display: inline-block;
+     position: absolute;
+     top: 20px;
+     right: 20px;
+     z-index: 1; /* Añadir un índice z para asegurarse de que esté delante de otros elementos */
+    }
+
+    .cloud-button a {
+     color: #fff; /* Color de texto blanco */
+     text-decoration: none; /* Sin subrayado para el enlace */
+     font-weight: bold; /* Texto en negrita */
+    }
+
+  </style>
+</head>
+<body>
+  <header>
+      <img id="logo-img" src="app_launcher_icon.jpg" alt="Logo">
+      <h1>Detalles del Llave de paso</h1>
+      <div class="cloud-button">
+        <a href="PaginaWeb.html">Volver a la página de inicio</a>
+      </div>
+  </header>
+
+  <main>
+    <div id="product-details">
+      <img id="product-image" src="LLLAVE.jpg" alt="Balde">
+      <div id="product-details-text">
+        <h2 id="product-name">Llave</h2>
+        <div id="product-rating">★★★★☆</div>
+        <h3 id="price-title">Precio:</h3>
+        <p id="product-price">$99.99</p>
+      </div>
+    </div>
+
+    <div class="info-border">
+      <h3 id="description-title">Descripción:</h3>
+        Esta es la descripción del balde. Aquí puedes agregar todos los detalles y características importantes sobre el producto.
+    </div>
+
+    <div id="question-form">
+      <h3>Preguntas frecuentes:</h3>
+      <form>
+        <label for="name">Nombre:</label>
+        <input type="text" id="name" required>
+        <label for="email">Correo electrónico:</label>
+        <input type="email" id="email" required>
+        <label for="question">Pregunta:</label>
+        <textarea id="question" rows="4" required></textarea>
+        <button type="submit">Enviar Pregunta</button>
+      </form>
+    </div>
+
+    <div id="comments-section">
+      <h3>Comentarios:</h3>
+      <div class="comment">
+        <p>Excelente producto. Muy satisfecho.</p>
+        <div class="rating">★★★★★</div>
+      </div>
+      <div class="comment">
+        <p>Buen producto, pero el envío fue lento.</p>
+        <div class="rating">★★★☆☆</div>
+      </div>
+      <!-- Puedes agregar más comentarios aquí -->
+    </div>
+  </main>
+
+  <footer>
+    <p>Derechos de autor © 2023 Tienda Quebracho. Todos los derechos reservados.</p>
+  </footer>
+</body>
+</html>

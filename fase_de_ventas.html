@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Detalles del Producto - Tienda Quebracho</title>
+  <style>
+    /* Estilos generales */
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    /* Estilos específicos para esta página */
+    header {
+      background-color: #000000;
+      color: #ffffff;
+      padding: 1rem;
+      display: flex;
+      align-items: center;
+    }
+
+    header a {
+      color: #ffffff;
+      text-decoration: none;
+      margin-left: auto;
+    }
+
+    main {
+      padding: 2rem;
+    }
+
+    #product-details {
+      text-align: center;
+    }
+
+    #product-image {
+      max-width: 100%;
+      height: auto;
+    }
+
+    #product-rating {
+      font-size: 24px;
+      color: #ffcc00;
+    }
+
+    #question-form {
+      margin-top: 2rem;
+      text-align: center;
+    }
+
+    #question-form label {
+      display: block;
+      margin-bottom: 0.5rem;
+    }
+
+    #question-form textarea {
+      width: 100%;
+      padding: 8px;
+      margin-bottom: 1rem;
+      resize: vertical;
+    }
+
+    #comments-section {
+      margin-top: 2rem;
+      text-align: center;
+    }
+
+    /* Parte inferior naranja */
+    footer {
+      background-color: #ff9924;
+      color: #fff;
+      text-align: center;
+      padding: 1rem;
+    }
+    #logo-img {
+      max-width: 200px;
+      height: auto;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Detalles del Producto</h1>
+    <a href="PaginaWeb.html">Volver a la lista de productos</a>
+  </header>
+
+  <main>
+    <div id="product-details">
+      <img id="product-image" src="imagen_del_producto.jpg" alt="Nombre del Producto">
+      <h2>Nombre del Producto</h2>
+      <p>Descripción del Producto.</p>
+      <p>Precio: $99.99</p>
+      <div id="product-rating">★★★★☆</div>
+    </div>
+
+    <div id="question-form">
+      <h3>Deja una pregunta:</h3>
+      <form>
+        <label for="name">Nombre:</label>
+        <input type="text" id="name" required>
+        <label for="email">Correo electrónico:</label>
+        <input type="email" id="email" required>
+        <label for="question">Pregunta:</label>
+        <textarea id="question" rows="4" required></textarea>
+        <button type="submit">Enviar Pregunta</button>
+      </form>
+    </div>
+
+    <div id="comments-section">
+      <h3>Comentarios:</h3>
+      <!-- Aquí se mostrarán los comentarios y calificaciones de los compradores -->
+      <div>
+        <p>Excelente producto. Muy satisfecho.</p>
+        <div>★★★★★</div>
+      </div>
+      <div>
+        <p>Buen producto, pero el envío fue lento.</p>
+        <div>★★★☆☆</div>
+      </div>
+      <!-- Puedes agregar más comentarios aquí -->
+    </div>
+  </main>
+
+  <footer>
+    <p>Derechos de autor © 2023 Tienda Quebracho. Todos los derechos reservados.</p>
+  </footer>
+</body>
+</html>
